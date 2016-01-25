@@ -919,3 +919,75 @@ Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8b
 
 
 Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-01-25 16:37:08 -0500
+
+
+Started GET "/" for ::1 at 2016-01-25 17:13:39 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendered /Users/dralarakhia/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/railties-4.2.5/lib/rails/templates/rails/welcome/index.html.erb (2.4ms)
+Completed 200 OK in 25ms (Views: 13.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/pictures" for ::1 at 2016-01-25 17:13:45 -0500
+Processing by PicturesController#index as HTML
+  [1m[35mPicture Load (0.6ms)[0m  SELECT "pictures".* FROM "pictures"
+  Rendered pictures/index.html.erb within layouts/application (7.0ms)
+Completed 200 OK in 263ms (Views: 259.4ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/pictures/1" for ::1 at 2016-01-25 17:13:54 -0500
+Processing by PicturesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPicture Load (0.2ms)[0m  [1mSELECT  "pictures".* FROM "pictures" WHERE "pictures"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered pictures/show.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 35ms (Views: 21.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/pictures/2" for ::1 at 2016-01-25 17:14:00 -0500
+Processing by PicturesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mPicture Load (0.1ms)[0m  SELECT  "pictures".* FROM "pictures" WHERE "pictures"."id" = ? LIMIT 1  [["id", 2]]
+  Rendered pictures/show.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 20ms (Views: 19.1ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/pictures/3" for ::1 at 2016-01-25 17:14:15 -0500
+Processing by PicturesController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mPicture Load (0.1ms)[0m  [1mSELECT  "pictures".* FROM "pictures" WHERE "pictures"."id" = ? LIMIT 1[0m  [["id", 3]]
+  Rendered pictures/show.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 33ms (Views: 32.5ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/pictures" for ::1 at 2016-01-25 17:46:15 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by PicturesController#index as HTML
+  [1m[35mPicture Load (0.5ms)[0m  SELECT "pictures".* FROM "pictures"
+  Rendered pictures/index.html.erb within layouts/application (10.0ms)
+Completed 200 OK in 284ms (Views: 269.1ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/" for ::1 at 2016-01-25 17:46:16 -0500
+Processing by Rails::WelcomeController#index as HTML
+  Rendered /Users/dralarakhia/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/railties-4.2.5/lib/rails/templates/rails/welcome/index.html.erb (0.9ms)
+Completed 200 OK in 7ms (Views: 6.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/pictures" for ::1 at 2016-01-25 17:46:22 -0500
+Processing by PicturesController#index as HTML
+  [1m[36mPicture Load (0.1ms)[0m  [1mSELECT "pictures".* FROM "pictures"[0m
+  Rendered pictures/index.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 22ms (Views: 21.0ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/pictures/new" for ::1 at 2016-01-25 17:47:03 -0500
+Processing by PicturesController#new as HTML
+  Rendered pictures/new.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 22ms (Views: 21.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/pictures" for ::1 at 2016-01-25 17:47:22 -0500
+Processing by PicturesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"xvTszE7OIqn7ffDBJ5CSE1Su+P7N3DWGWYCRd6v5UU5nhY2NCQSkD1zQoREm1ZCjxMG5ahHB6S9pQ3wq1m28pA==", "artist"=>"arif", "title"=>"dr", "url"=>"arif.com", "commit"=>"Save"}
+  Rendered text template (0.0ms)
+Completed 200 OK in 3ms (Views: 2.5ms | ActiveRecord: 0.0ms)
