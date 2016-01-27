@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
 
-    delete 'pictures/:id' => 'pictures#destroy', as: "delete_picture"
+    # delete 'pictures/:id' => 'pictures#destroy', as: "delete_picture"
 
     resources :pictures
 
